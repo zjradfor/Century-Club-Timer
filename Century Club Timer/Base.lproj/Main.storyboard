@@ -29,6 +29,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-2D-Hsd">
                                         <rect key="frame" x="323" y="10" width="71" height="30"/>
                                         <state key="normal" title="End Game"/>
+                                        <connections>
+                                            <action selector="endGamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="l1Z-bd-Op1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-hT-naf">
                                         <rect key="frame" x="294" y="333" width="100" height="50"/>
@@ -102,6 +105,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-ff-NZ5">
                                         <rect key="frame" x="369" y="16" width="25" height="24"/>
+                                        <connections>
+                                            <action selector="addPlayerPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="zWp-7v-Lmv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -130,6 +136,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="VoS-fv-g5L" id="EnX-Lm-tbn"/>
                         <outlet property="progressBar" destination="whv-n4-3mI" id="F5x-7H-rq1"/>
                         <outlet property="startButton" destination="5CL-hT-naf" id="YGo-VM-qtc"/>
                         <outlet property="tableview" destination="vlK-d4-nwR" id="BoH-Hl-Hwv"/>
