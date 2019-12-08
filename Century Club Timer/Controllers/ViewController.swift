@@ -39,6 +39,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         if count == 2 {
             countdownTimerDidStart = false
             startButton.setTitle("START",for: .normal)
+            count = 0
             
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             

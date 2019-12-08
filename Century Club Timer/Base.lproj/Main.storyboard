@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="391"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whv-n4-3mI" customClass="ProgressBar" customModule="Century_Club_Timer" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="95.5" width="200" height="200"/>
+                                        <rect key="frame" x="82" y="70.5" width="250" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Y2O-49-qTn"/>
-                                            <constraint firstAttribute="height" constant="200" id="asg-Ie-NSn"/>
+                                            <constraint firstAttribute="width" constant="250" id="Y2O-49-qTn"/>
+                                            <constraint firstAttribute="height" constant="250" id="asg-Ie-NSn"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-hT-naf">

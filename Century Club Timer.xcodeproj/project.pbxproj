@@ -64,19 +64,51 @@
 		4BB55640239C5D36002A9A31 /* Century Club Timer */ = {
 			isa = PBXGroup;
 			children = (
-				4BB55641239C5D36002A9A31 /* AppDelegate.swift */,
-				4BB55643239C5D36002A9A31 /* SceneDelegate.swift */,
-				4BB55645239C5D36002A9A31 /* ViewController.swift */,
+				4BB55662239D5AC0002A9A31 /* Delegates */,
+				4BB55661239D5A84002A9A31 /* Utils */,
+				4BB55660239D5A7E002A9A31 /* Views */,
+				4BB5565F239D5A67002A9A31 /* Controllers */,
 				4BB55647239C5D36002A9A31 /* Main.storyboard */,
 				4BB5564A239C5D37002A9A31 /* Assets.xcassets */,
 				4BB5564C239C5D37002A9A31 /* LaunchScreen.storyboard */,
 				4BB5564F239C5D37002A9A31 /* Info.plist */,
-				4BB55655239C6293002A9A31 /* ProgressBar.swift */,
-				4BB55657239C7061002A9A31 /* CountdownTimerDelegate.swift */,
-				4BB55659239C70B2002A9A31 /* CountdownTimer.swift */,
-				4BB5565B239C7A9E002A9A31 /* CustomColours.swift */,
 			);
 			path = "Century Club Timer";
+			sourceTree = "<group>";
+		};
+		4BB5565F239D5A67002A9A31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BB55659239C70B2002A9A31 /* CountdownTimer.swift */,
+				4BB55645239C5D36002A9A31 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4BB55660239D5A7E002A9A31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4BB55655239C6293002A9A31 /* ProgressBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BB55661239D5A84002A9A31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5565B239C7A9E002A9A31 /* CustomColours.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4BB55662239D5AC0002A9A31 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4BB55657239C7061002A9A31 /* CountdownTimerDelegate.swift */,
+				4BB55643239C5D36002A9A31 /* SceneDelegate.swift */,
+				4BB55641239C5D36002A9A31 /* AppDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

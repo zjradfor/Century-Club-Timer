@@ -45,7 +45,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         fgProgressLayer.backgroundColor = UIColor.clear.cgColor
         fgProgressLayer.fillColor = nil
         fgProgressLayer.strokeColor = UIColor.black.cgColor
-        fgProgressLayer.lineWidth = 4.0
+        fgProgressLayer.lineWidth = 8.0
         fgProgressLayer.strokeStart = 0.0
         fgProgressLayer.strokeEnd = 0.0
         
@@ -75,7 +75,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         bgProgressLayer.backgroundColor = UIColor.clear.cgColor
         bgProgressLayer.fillColor = nil
         bgProgressLayer.strokeColor = UIColor.black.cgColor
-        bgProgressLayer.lineWidth = 4.0
+        bgProgressLayer.lineWidth = 8.0
         bgProgressLayer.strokeStart = 0.0
         bgProgressLayer.strokeEnd = 1.0
         
