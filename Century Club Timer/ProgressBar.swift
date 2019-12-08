@@ -23,9 +23,8 @@ class ProgressBar: UIView, CAAnimationDelegate {
         return bgProgressLayer
     }()
     
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         loadBgProgressBar()
         loadFgProgressBar()
     }
@@ -35,7 +34,6 @@ class ProgressBar: UIView, CAAnimationDelegate {
         loadBgProgressBar()
         loadFgProgressBar()
     }
-    
     
     fileprivate func loadFgProgressBar() {
         
@@ -54,21 +52,18 @@ class ProgressBar: UIView, CAAnimationDelegate {
         gradientMaskLayer.mask = fgProgressLayer
         layer.addSublayer(gradientMaskLayer)
     }
-    
-    
-    
+
     fileprivate func gradientMask() -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.locations = [0.0, 1.0]
-        let colorTop: AnyObject = CustomColor.lime.cgColor
-        let colorBottom: AnyObject = CustomColor.summerSky.cgColor
+        let colorTop: AnyObject = CustomColour.lime.cgColor
+        let colorBottom: AnyObject = CustomColour.summerSky.cgColor
         let arrayOfColors: [AnyObject] = [colorTop, colorBottom]
         gradientLayer.colors = arrayOfColors
         
         return gradientLayer
     }
-    
     
     fileprivate func loadBgProgressBar() {
         
@@ -88,19 +83,17 @@ class ProgressBar: UIView, CAAnimationDelegate {
         layer.addSublayer(gradientMaskLayer)
     }
     
-    
     fileprivate func gradientMaskBg() -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.locations = [0.0, 1.0]
-        let colorTop: AnyObject = CustomColor.flipside.cgColor
-        let colorBottom: AnyObject = CustomColor.flipside.cgColor
+        let colorTop: AnyObject = CustomColour.flipside.cgColor
+        let colorBottom: AnyObject = CustomColour.flipside.cgColor
         let arrayOfColors: [AnyObject] = [colorTop, colorBottom]
         gradientLayer.colors = arrayOfColors
         
         return gradientLayer
     }
-    
     
     public func setProgressBar(hours:Int, minutes:Int, seconds:Int) {
         let hoursToSeconds = hours * 3600
@@ -125,7 +118,6 @@ class ProgressBar: UIView, CAAnimationDelegate {
         stopAnimation()
     }
     
-    
     fileprivate func startAnimation() {
         
         resetAnimation()
@@ -144,7 +136,6 @@ class ProgressBar: UIView, CAAnimationDelegate {
         
     }
     
-    
     fileprivate func resetAnimation() {
         fgProgressLayer.speed = 1.0
         fgProgressLayer.timeOffset = 0.0
@@ -152,7 +143,6 @@ class ProgressBar: UIView, CAAnimationDelegate {
         fgProgressLayer.strokeEnd = 0.0
         animationDidStart = false
     }
-    
     
     fileprivate func stopAnimation() {
         fgProgressLayer.speed = 1.0
@@ -163,14 +153,12 @@ class ProgressBar: UIView, CAAnimationDelegate {
         animationDidStart = false
     }
     
-    
     fileprivate func pauseAnimation(){
         let pausedTime = fgProgressLayer.convertTime(CACurrentMediaTime(), from: nil)
         fgProgressLayer.speed = 0.0
         fgProgressLayer.timeOffset = pausedTime
         
     }
-    
     
     fileprivate func resumeAnimation(){
         let pausedTime = fgProgressLayer.timeOffset

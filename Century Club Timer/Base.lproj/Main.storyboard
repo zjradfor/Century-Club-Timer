@@ -23,48 +23,30 @@
                                     <constraint firstAttribute="height" constant="300" id="asg-Ie-NSn"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="15G-AZ-7fA">
-                                <rect key="frame" x="0.0" y="782" width="414" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc3-Zz-IfJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="JHa-u2-er6"/>
-                                            <constraint firstAttribute="width" constant="169.5" id="qUJ-5D-DZJ"/>
-                                        </constraints>
-                                        <state key="normal" title="STOP"/>
-                                        <connections>
-                                            <action selector="stopTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVu-N0-B8D"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-hT-naf">
-                                        <rect key="frame" x="240.5" y="0.0" width="173.5" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="3lW-Y8-CGL"/>
-                                            <constraint firstAttribute="width" constant="173.5" id="gPC-hm-3O9"/>
-                                        </constraints>
-                                        <state key="normal" title="START"/>
-                                        <connections>
-                                            <action selector="startTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZa-02-2Fi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-hT-naf">
+                                <rect key="frame" x="157" y="772" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3lW-Y8-CGL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gPC-hm-3O9"/>
+                                </constraints>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="cG6-Ig-tHW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="whv-n4-3mI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3d4-u8-Kav"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="15G-AZ-7fA" secondAttribute="bottom" constant="30" id="64G-6u-sRE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5CL-hT-naf" secondAttribute="bottom" constant="40" id="f0y-Z3-1W2"/>
                             <constraint firstItem="whv-n4-3mI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBq-BT-ggI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="15G-AZ-7fA" secondAttribute="trailing" id="fje-Ni-NX2"/>
-                            <constraint firstItem="15G-AZ-7fA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w8Y-P7-iPl"/>
+                            <constraint firstItem="5CL-hT-naf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2V-hb-WJE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="progressBar" destination="whv-n4-3mI" id="F5x-7H-rq1"/>
                         <outlet property="startButton" destination="5CL-hT-naf" id="YGo-VM-qtc"/>
-                        <outlet property="stopButton" destination="Zc3-Zz-IfJ" id="Xcv-7D-jTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

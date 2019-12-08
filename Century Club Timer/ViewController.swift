@@ -12,7 +12,6 @@ import AudioToolbox
 class ViewController: UIViewController, CountdownTimerDelegate {
 
     @IBOutlet weak var progressBar: ProgressBar!
-    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
     var countdownTimerDidStart: Bool = false
@@ -22,17 +21,9 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         return timer
     }()
     
-    let selectedSecs: Int = 10
+    let selectedSecs: Int = 5
     
-    lazy var messageLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 24.0)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.text = "DONE"
-        return label
-    }()
+    var count: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,60 +31,42 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         countdownTimer.delegate = self
         countdownTimer.setTimer(seconds: selectedSecs)
         progressBar.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
-        stopButton.isEnabled = false
-        stopButton.alpha = 0.5
-        
-        view.addSubview(messageLabel)
-        
-        var constraintCenter = NSLayoutConstraint(item: messageLabel, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
-        self.view.addConstraint(constraintCenter)
-        constraintCenter = NSLayoutConstraint(item: messageLabel, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
-        self.view.addConstraint(constraintCenter)
-        
-        messageLabel.isHidden = true
-        
     }
     
     func countdownTimerDone() {
-        messageLabel.isHidden = false
-        countdownTimerDidStart = false
-        stopButton.isEnabled = false
-        stopButton.alpha = 0.5
-        startButton.setTitle("START",for: .normal)
+        count += 1
         
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        print("countdownTimerDone")
+        if count == 2 {
+            countdownTimerDidStart = false
+            startButton.setTitle("START",for: .normal)
+            
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            print("countdownTimerDone")
+        } else {
+            startTimer()
+        }
     }
 
-    @IBAction func startTimer() {
-        messageLabel.isHidden = true
-        
-        stopButton.isEnabled = true
-        stopButton.alpha = 1.0
-        
-        if !countdownTimerDidStart{
-            countdownTimer.start()
-            progressBar.start()
+    @IBAction func startButtonPressed() {
+        if !countdownTimerDidStart {
+            startTimer()
             countdownTimerDidStart = true
             startButton.setTitle("PAUSE",for: .normal)
-            
-        }else{
-            countdownTimer.pause()
-            progressBar.pause()
+        } else {
+            pauseTimer()
             countdownTimerDidStart = false
             startButton.setTitle("RESUME",for: .normal)
         }
     }
     
-
-    @IBAction func stopTimer() {
-        countdownTimer.stop()
-        progressBar.stop()
-        countdownTimerDidStart = false
-        stopButton.isEnabled = false
-        stopButton.alpha = 0.5
-        startButton.setTitle("START",for: .normal)
+    func startTimer() {
+        countdownTimer.start()
+        progressBar.start()
+    }
+    
+    func pauseTimer() {
+        countdownTimer.pause()
+        progressBar.pause()
     }
 }
-

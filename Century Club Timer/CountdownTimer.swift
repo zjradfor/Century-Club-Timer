@@ -12,8 +12,10 @@ class CountdownTimer {
     
     weak var delegate: CountdownTimerDelegate?
     
-    private var seconds: Double = 0.0
+    private var defaultTime: Double = 0.0
     private var duration: Double = 0.0
+    
+    let decrement: Double = 0.01
     
     lazy var timer: Timer = {
         let timer = Timer()
@@ -22,7 +24,7 @@ class CountdownTimer {
     
     func setTimer(seconds: Int) {
         duration = Double(seconds)
-        self.seconds = Double(seconds)
+        defaultTime = Double(seconds)
     }
     
     func start() {
@@ -33,13 +35,8 @@ class CountdownTimer {
         timer.invalidate()
     }
     
-    func stop() {
-        timer.invalidate()
-        duration = seconds
-    }
-    
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: decrement, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer(){
@@ -47,13 +44,13 @@ class CountdownTimer {
             timer.invalidate()
             timerDone()
         } else {
-            duration -= 0.01
+            duration -= decrement
         }
     }
     
     func timerDone() {
         timer.invalidate()
-        duration = seconds
+        duration = defaultTime
         delegate?.countdownTimerDone()
     }
 }
