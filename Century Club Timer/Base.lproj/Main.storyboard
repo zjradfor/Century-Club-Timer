@@ -33,6 +33,9 @@
                                             <constraint firstAttribute="width" constant="169.5" id="qUJ-5D-DZJ"/>
                                         </constraints>
                                         <state key="normal" title="STOP"/>
+                                        <connections>
+                                            <action selector="stopTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVu-N0-B8D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CL-hT-naf">
                                         <rect key="frame" x="240.5" y="0.0" width="173.5" height="50"/>
@@ -41,6 +44,9 @@
                                             <constraint firstAttribute="width" constant="173.5" id="gPC-hm-3O9"/>
                                         </constraints>
                                         <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="startTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZa-02-2Fi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
