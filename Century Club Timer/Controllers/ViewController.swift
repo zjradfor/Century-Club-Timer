@@ -9,10 +9,12 @@
 import UIKit
 import AudioToolbox
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var progressBar: ProgressBar!
     @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var tableview: UITableView!
     
     var countdownTimerDidStart: Bool = false
     
@@ -27,6 +29,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableview.dataSource = self
+        tableview.delegate = self
+        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         countdownTimer.delegate = self
         countdownTimer.setTimer(seconds: selectedSecs)
@@ -69,6 +75,17 @@ class ViewController: UIViewController {
     func pauseTimer() {
         countdownTimer.pause()
         progressBar.pause()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "HELLO"
+        return cell
     }
 }
 
