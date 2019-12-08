@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class ViewController: UIViewController, CountdownTimerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var progressBar: ProgressBar!
     @IBOutlet weak var startButton: UIButton!
@@ -33,7 +33,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         progressBar.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
     }
     
-    func countdownTimerDone() {
+    func timerDone() {
         count += 1
         
         if count == 2 {
@@ -69,5 +69,11 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     func pauseTimer() {
         countdownTimer.pause()
         progressBar.pause()
+    }
+}
+
+extension ViewController: CountdownTimerDelegate {
+    func countdownTimerDone() {
+        timerDone()
     }
 }
