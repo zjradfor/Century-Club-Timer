@@ -50,71 +50,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-kN-xP8">
-                                <rect key="frame" x="138" y="424" width="138" height="48"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoI-UX-fKd">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="39" id="VWe-nL-den"/>
-                                            <constraint firstAttribute="height" constant="48" id="YLC-23-WXN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fu-WS-j61">
-                                        <rect key="frame" x="39" y="0.0" width="10" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="fNb-Se-U56"/>
-                                            <constraint firstAttribute="width" constant="10" id="vqT-eg-fae"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-Ve-Pys">
-                                        <rect key="frame" x="49" y="0.0" width="39" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="Yfe-41-sAE"/>
-                                            <constraint firstAttribute="width" constant="39" id="nYO-VM-C1x"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th3-oc-DCu">
-                                        <rect key="frame" x="88" y="0.0" width="10" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="10" id="AeI-td-z2W"/>
-                                            <constraint firstAttribute="height" constant="48" id="uNY-Ze-nwP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og7-3l-61u">
-                                        <rect key="frame" x="98" y="0.0" width="40" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="VHf-Aw-lS5"/>
-                                            <constraint firstAttribute="width" constant="40" id="nY3-yC-r2Z"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="pa6-QA-0x7"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="whv-n4-3mI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3d4-u8-Kav"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="15G-AZ-7fA" secondAttribute="bottom" constant="30" id="64G-6u-sRE"/>
-                            <constraint firstItem="Qch-kN-xP8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JRS-dn-hID"/>
-                            <constraint firstItem="Qch-kN-xP8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OC1-R5-UUe"/>
                             <constraint firstItem="whv-n4-3mI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBq-BT-ggI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="15G-AZ-7fA" secondAttribute="trailing" id="fje-Ni-NX2"/>
                             <constraint firstItem="15G-AZ-7fA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w8Y-P7-iPl"/>
@@ -122,11 +62,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="counterView" destination="Qch-kN-xP8" id="kyF-H5-1M8"/>
-                        <outlet property="hours" destination="HoI-UX-fKd" id="CN9-t2-3uX"/>
-                        <outlet property="minutes" destination="Xtp-Ve-Pys" id="mRR-wY-ahS"/>
                         <outlet property="progressBar" destination="whv-n4-3mI" id="F5x-7H-rq1"/>
-                        <outlet property="seconds" destination="og7-3l-61u" id="hkg-qM-wUJ"/>
                         <outlet property="startButton" destination="5CL-hT-naf" id="YGo-VM-qtc"/>
                         <outlet property="stopButton" destination="Zc3-Zz-IfJ" id="Xcv-7D-jTV"/>
                     </connections>

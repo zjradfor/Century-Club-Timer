@@ -20,25 +20,9 @@ class CountdownTimer {
         return timer
     }()
     
-    func setTimer(hours: Int, minutes: Int, seconds: Int) {
-        let hoursToSeconds = hours * 3600
-        let minutesToSeconds = minutes * 60
-        let secondsToSeconds = seconds
-        
-        let seconds = secondsToSeconds + minutesToSeconds + hoursToSeconds
+    func setTimer(seconds: Int) {
+        duration = Double(seconds)
         self.seconds = Double(seconds)
-        self.duration = Double(seconds)
-        
-        delegate?.countdownTime(time: timeString(time: TimeInterval(ceil(duration))))
-    }
-    
-    func timeString(time:TimeInterval) -> (hours: String, minutes:String, seconds:String) {
-        
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        
-        return (hours: String(format:"%02i", hours), minutes: String(format:"%02i", minutes), seconds: String(format:"%02i", seconds))
     }
     
     func start() {
@@ -52,7 +36,6 @@ class CountdownTimer {
     func stop() {
         timer.invalidate()
         duration = seconds
-        delegate?.countdownTime(time: timeString(time: TimeInterval(ceil(duration))))
     }
     
     func runTimer() {
@@ -65,7 +48,6 @@ class CountdownTimer {
             timerDone()
         } else {
             duration -= 0.01
-            delegate?.countdownTime(time: timeString(time: TimeInterval(ceil(duration))))
         }
     }
     

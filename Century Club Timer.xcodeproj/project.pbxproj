@@ -16,6 +16,7 @@
 		4BB55656239C6293002A9A31 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB55655239C6293002A9A31 /* ProgressBar.swift */; };
 		4BB55658239C7061002A9A31 /* CountdownTimerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB55657239C7061002A9A31 /* CountdownTimerDelegate.swift */; };
 		4BB5565A239C70B2002A9A31 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB55659239C70B2002A9A31 /* CountdownTimer.swift */; };
+		4BB5565C239C7A9E002A9A31 /* CustomColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5565B239C7A9E002A9A31 /* CustomColours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4BB55655239C6293002A9A31 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		4BB55657239C7061002A9A31 /* CountdownTimerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerDelegate.swift; sourceTree = "<group>"; };
 		4BB55659239C70B2002A9A31 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		4BB5565B239C7A9E002A9A31 /* CustomColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColours.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4BB55655239C6293002A9A31 /* ProgressBar.swift */,
 				4BB55657239C7061002A9A31 /* CountdownTimerDelegate.swift */,
 				4BB55659239C70B2002A9A31 /* CountdownTimer.swift */,
+				4BB5565B239C7A9E002A9A31 /* CustomColours.swift */,
 			);
 			path = "Century Club Timer";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				4BB5565A239C70B2002A9A31 /* CountdownTimer.swift in Sources */,
 				4BB55642239C5D36002A9A31 /* AppDelegate.swift in Sources */,
 				4BB55656239C6293002A9A31 /* ProgressBar.swift in Sources */,
+				4BB5565C239C7A9E002A9A31 /* CustomColours.swift in Sources */,
 				4BB55658239C7061002A9A31 /* CountdownTimerDelegate.swift in Sources */,
 				4BB55644239C5D36002A9A31 /* SceneDelegate.swift in Sources */,
 			);

@@ -8,5 +8,4 @@
 
 protocol CountdownTimerDelegate: class {
     func countdownTimerDone()
-    func countdownTime(time: (hours: String, minutes: String, seconds: String))
 }

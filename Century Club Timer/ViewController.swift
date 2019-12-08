@@ -12,10 +12,6 @@ import AudioToolbox
 class ViewController: UIViewController, CountdownTimerDelegate {
 
     @IBOutlet weak var progressBar: ProgressBar!
-    @IBOutlet weak var hours: UILabel!
-    @IBOutlet weak var minutes: UILabel!
-    @IBOutlet weak var seconds: UILabel!
-    @IBOutlet weak var counterView: UIStackView!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
@@ -26,7 +22,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         return timer
     }()
     
-    let selectedSecs: Int = 30
+    let selectedSecs: Int = 10
     
     lazy var messageLabel: UILabel = {
         let label = UILabel(frame: .zero)
@@ -42,7 +38,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         super.viewDidLoad()
         
         countdownTimer.delegate = self
-        countdownTimer.setTimer(hours: 0, minutes: 0, seconds: selectedSecs)
+        countdownTimer.setTimer(seconds: selectedSecs)
         progressBar.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
         stopButton.isEnabled = false
         stopButton.alpha = 0.5
@@ -55,13 +51,11 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         self.view.addConstraint(constraintCenter)
         
         messageLabel.isHidden = true
-        counterView.isHidden = false
+        
     }
     
     func countdownTimerDone() {
-        counterView.isHidden = true
         messageLabel.isHidden = false
-        seconds.text = String(selectedSecs)
         countdownTimerDidStart = false
         stopButton.isEnabled = false
         stopButton.alpha = 0.5
@@ -71,16 +65,9 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         
         print("countdownTimerDone")
     }
-    
-    func countdownTime(time: (hours: String, minutes: String, seconds: String)) {
-        hours.text = time.hours
-        minutes.text = time.minutes
-        seconds.text = time.seconds
-    }
 
     @IBAction func startTimer() {
         messageLabel.isHidden = true
-        counterView.isHidden = false
         
         stopButton.isEnabled = true
         stopButton.alpha = 1.0
