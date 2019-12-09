@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var count: Int = 0
     
+    var players: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         countdownTimer.delegate = self
         countdownTimer.setTimer(seconds: selectedSecs)
         progressBar.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
+        print(players.count)
     }
     
     func timerDone() {
@@ -77,7 +80,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
             if let textField = alert?.textFields?[0] {
                 if textField.text != "" {
-                    print("\(textField.text ?? "default")")
+                    self.players.append(textField.text ?? "nope")
+                    self.tableview.reloadData()
+                    //print("\(textField.text ?? "default")")
                 }
             }
         }))
@@ -105,13 +110,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "HELLO"
+        cell.textLabel?.text = players[indexPath.row]
         return cell
     }
 }
